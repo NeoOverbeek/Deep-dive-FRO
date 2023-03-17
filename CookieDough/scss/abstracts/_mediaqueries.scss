@@ -1,0 +1,57 @@
+@media screen and (max-width:68.75rem) {
+    .save {
+        display: none;
+    }
+
+    .upgrades {
+        display: none;
+    }
+
+    .header {
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .main {
+        flex-direction: column;
+        transform: translateY(-10%);
+    }
+
+    .cookie {
+        width: 25rem;
+
+        &:active{
+            width: 25rem;
+        }
+
+        &__spots {
+            width: 4rem;
+        }
+    }
+
+    .score{
+        font-size: 150%;
+        width: 90%;
+    }
+
+    .upgradesMobile{
+        display: grid;
+        
+        &__upgrade{
+            border-radius: 1rem;
+            gap: 0.5rem;
+            font-size: 80%;
+            transition: 0.2s all;
+            &:active{
+            transform: scale(0.9);
+            }
+        }
+        
+    }
+
+    .score{
+        width: 100%;
+    }
+    
+
+}

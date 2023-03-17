@@ -1,0 +1,82 @@
+@use "../../abstracts/colors";
+
+.main{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column-reverse;
+    transform: translateY(-25%);
+    gap: 2rem;
+    margin-top: 10rem;
+}
+
+.cookie{
+    width: 30rem;
+    aspect-ratio: 1/1;
+    background: map-get(colors.$cookie, "background");
+    border-radius: 50%;
+    box-shadow: inset 0 0 10rem 0 map-get(colors.$cookie, "spots"),
+                0 2rem 2rem 0rem rgba(0,0,0,0.2);
+    position: relative;
+    overflow: hidden;
+    transition: 0.2s all;
+
+    &:hover{
+        cursor: pointer;
+    }
+
+    &:active{
+        transform: scale(0.95);
+    }
+
+    &--chocolate{
+        background: #3C2A21;
+    }
+
+    &--chocolate &__spots{
+        background: #f0dcb5;
+    }
+
+    &--velvet{
+        background: rgb(156, 1, 1);
+    }
+
+    &--velvet &__spots{
+        background: #f0dcb5;
+    }
+
+    &__spots{
+        width: 5rem;
+        aspect-ratio: 1/1;
+        background: map-get(colors.$cookie, "spots");
+        border-radius: 50%;
+        position: absolute;
+
+
+        &--first{
+            top: 10%;
+            left: 5%;
+        }
+        &--second{
+            top: 0;
+            right: 15%;
+        }
+        &--third{
+            bottom: 10%;
+            right: 5%;
+        }
+        &--fourth{
+            bottom: 10%;
+            left: 10%;
+        }
+        &--fifth{
+            top: 30%;
+            right: 20%;
+        }
+        &--sixth{
+            bottom: 40%;
+            right: 60%;
+        }
+    }
+}
